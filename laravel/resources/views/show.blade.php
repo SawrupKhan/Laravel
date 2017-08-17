@@ -1,18 +1,18 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 @section('content')
+<div class="container">
 
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
 
 
+<h1><font style="color:#FFFFFF"> Student's ID List</font></h1>
+<br>
     <table id="table" class="table table-striped table-bordered"  cellspacing="0" width="100%">
     <thead>
         <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Roll</th>
+            <th bgcolor="#FFFFFF">Name</th>
+            <th bgcolor="#FFFFFF">Email</th>
+            <th bgcolor="#FFFFFF">Roll</th>
         </tr>
     </thead>
 
@@ -30,11 +30,16 @@ foreach ($users as $value)
 
             <td><?php echo $value-> email;?></td>
             <td><?php echo $value-> roll;?></td>
+          
         </tr>
     </tbody>
 
     <?php } ?>
+
 </table>
+
+</div>
+@endsection
 
 
  <script type="text/javascript">
@@ -43,4 +48,4 @@ foreach ($users as $value)
     $('#table').DataTable();
     } );	
  </script>
-@endsection
+

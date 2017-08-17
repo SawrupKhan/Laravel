@@ -1,21 +1,60 @@
-@extends('layouts.app')
+@extends('layouts.view')
 @section('content')
 
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
 
 
-    <table id="table" class="table table-striped table-bordered"  cellspacing="0" width="100%">
-    <thead>
-        <tr>
-              <th>Name</th>
-            <th>Designation</th>
-            <th>Unit</th>
-            <th>Visiting Time</th>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse ;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 16px;
+ 
+}
+
+#myTable th, #myTable td {
+    
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #4CAF50;
+}
+</style>
+
+ 
+
+<center><p><h2><font style="">Doctor's List</font></p><h2></center><br>
+
+    <table id="myTable"  >
+    <tr class="header">
+        
+            <th   >Name</th>
+            <th  >Designation</th>
+            <th  >Unit</th>
+            <th >Visiting Time</th>
         </tr>
-    </thead>
+ 
 
     <?php
 
@@ -39,10 +78,5 @@ foreach ($doctors as $value)
 </table>
 
 
- <script type="text/javascript">
-    
-     $(document).ready(function() {
-    $('#table').DataTable();
-    } );    
- </script>
+
 @endsection

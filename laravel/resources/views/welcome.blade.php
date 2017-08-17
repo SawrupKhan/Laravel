@@ -68,7 +68,7 @@
             }
         </style>
     </head>
-    <body>
+    <body style = "background: url('/img/HP-Header-WebsiteDesign.jpg');">
 
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
@@ -76,25 +76,23 @@
                     @if (Auth::check())
                         <a href="{{ url('/home') }}">Home</a>
                     @else
+                        <a href="{{ url('/admin/login') }}" class="btn btn-success btn-lg">Admin Login</a>
                         <a href="{{ url('/login') }}" class = "btn btn-success btn-lg">User Login</a>
                         <a href="{{ url('/register') }}" class = "btn btn-warning">User Register</a>
                     @endif
                 </div>
             @endif
 
+               
+
             <div class="content">
                 <div class="title m-b-md">
-                  <img class="img-responsive img-left" src="img/Ruet Medical.jpg" alt="" height="100" width="1600">
-                   Welcome To RUET Medical Center!!!
+               <!--   <img class="img-responsive img-left" src="img/HP-Header-WebsiteDesign.jpg" alt="" height="100" width="1600">
+                 --><font style="color:#000000">  Welcome To RUET Medical Center!!! </style>
                    </div>
                    
 
-               <div class="container">
-                <a href="{{ url('/admin/login') }}" class="btn btn-success btn-lg">
-       Admin Login 
-    </a>
-  </p> 
-                     </div>
+     
             </div>
         </div>
     </body>

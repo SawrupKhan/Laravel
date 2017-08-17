@@ -1,4 +1,8 @@
+@extends('layouts.admin')
+@section('content')
+
 <h1> Add New Blog Post </h1>
+
 <form class="" action="/blog" method ="post">
 {!! csrf_field() !!}
 <input type ="text" name ="title" value="" placeholder ="Titles">
@@ -10,3 +14,4 @@
 <input type="hidden" name="_taken" value="{{ csrf_token() }}">
 <input type = "submit" name="name" value ="post">
 </form>
+@endsection

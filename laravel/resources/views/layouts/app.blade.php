@@ -22,9 +22,9 @@
         ]);  ?>
     </script>
 </head>
-<body>
+<body  style = "background: url('/img/fff.jpg');background-position:  ;backgroud-repeat:no-repeat;">
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-inverse navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
 
@@ -37,8 +37,8 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                       # Ruet.medic.com
+                    <a class="navbar-brand" href="{{ url('/') }}"><font style="color:#FFFFFF" >
+                       Ruet.medic.com</font>
                     </a>
                 </div>
 
@@ -52,8 +52,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                       <li><a href="{{ url('/login') }}" class="btn-danger">User Login</a></li>
-                            <li><a href="{{ url('/register') }}" class="btn-danger">User Register</a></li> 
+                            <li><a href="{{ url('/admin/login') }}" class=""><font style="color:#FFFFFF" >Admin Login</font></a></li>
+                            <li><a href="{{ url('/register') }}" class=""><font style="color:#FFFFFF" >User Register</font></a></li> 
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

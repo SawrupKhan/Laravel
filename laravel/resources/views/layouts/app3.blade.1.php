@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="http://ani-laravel.strapui.com/css/vendor.css" />      
-        <link rel="stylesheet" href="http://ani-laravel.strapui.com/css/app-green.css" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -22,15 +21,10 @@
             'csrfToken' => csrf_token(),
         ]);  ?>
     </script>
-
-    <style>
-#example1{
-    background-image: url(HP-Header-WebsiteDesign.jpg);
-  </style>
 </head>
-<body>
+<body  style = "background: url('/img/natural.jpg');background-position:center center;backgroud-repeat:no-repeat;">
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-inverse navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
 
@@ -44,8 +38,8 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                       # Ruet.medic.com
-                    </a>
+                    <font style="color:#FFFFFF" >Ruet.medic.com</font>
+                    </a> 
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -58,8 +52,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                       <li><a href="{{ url('/login') }}" class="btn-danger">User Login</a></li>
-                            <li><a href="{{ url('/register') }}" class="btn-danger">User Register</a></li> 
+                       <li><a href="{{ url('/login') }}" class="">User Login</a></li>
+                            <li><a href="{{ url('/register') }}" class="">User Register</a></li> 
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
